@@ -217,14 +217,8 @@
                         <input type="tel" placeholder="Phone number" id="resPhone">
                     </div>
                     <div class="form-row">
-                        <div class="res-field">
-                            <label for="resDate">Date</label>
-                            <input type="date" id="resDate">
-                        </div>
-                        <div class="res-field">
-                            <label for="resTime">Time</label>
-                            <input type="time" id="resTime">
-                        </div>
+                        <input type="text" placeholder="Select date" id="resDate" onfocus="this.type='date'" onblur="if(!this.value)this.type='text'">
+                        <input type="text" placeholder="Select time" id="resTime" onfocus="this.type='time'" onblur="if(!this.value)this.type='text'">
                     </div>
                     <div class="form-row">
                         <select id="resGuests">
