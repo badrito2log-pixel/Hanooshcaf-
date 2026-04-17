@@ -110,7 +110,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ── Date input ──
     const dateInput = $('resDate');
-    if (dateInput) { const td = new Date().toISOString().split('T')[0]; dateInput.min = td; dateInput.value = td; }
+    if (dateInput) {
+        const td = new Date().toISOString().split('T')[0];
+        dateInput.setAttribute('data-min', td);
+        dateInput.addEventListener('focus', function() {
+            this.type = 'date';
+            this.min = this.getAttribute('data-min');
+        });
+        dateInput.addEventListener('blur', function() {
+            if (!this.value) this.type = 'text';
+        });
+    }
 
     // ── Map search bar ──
     const mapSearch = $('mapSearch');
