@@ -1172,21 +1172,6 @@ ul {
     margin-bottom: 12px
 }
 
-.res-field {
-    display: flex;
-    flex-direction: column;
-    gap: 6px
-}
-
-.res-field label {
-    font-family: var(--fa);
-    font-size: .75rem;
-    font-weight: 600;
-    color: rgba(191, 152, 116, .8);
-    letter-spacing: 1px;
-    text-transform: uppercase
-}
-
 .res-form input,
 .res-form select {
     width: 100%;
@@ -1197,9 +1182,7 @@ ul {
     color: #fff;
     font-family: var(--fb);
     font-size: 16px;
-    transition: border-color var(--fast);
-    -webkit-appearance: none;
-    appearance: none
+    transition: border-color var(--fast)
 }
 
 .res-form input[type="date"],
